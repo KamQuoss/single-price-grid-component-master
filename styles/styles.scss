@@ -6,6 +6,7 @@ $brightYellow: hsl(71, 73%, 54%);
 
 //     Neutral
 $white: #fff;
+$black: #000;
 $lightGray: hsl(204, 43%, 93%);
 $grayishBlue: #98a7bd;
 
@@ -16,13 +17,33 @@ $grayishBlue: #98a7bd;
 $mobile: 375px;
 $desktop: 1440px;
 
-@mixin reset-list {
+$radius: 0.5rem;
+
+@mixin reset-list() {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-@mixin centered-block {
+@mixin button() {
+    @include rounded-corners($radius);
+    @include shadow($black, 0.2);
+    display: inline-flex;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: large;
+    background-color: $brightYellow;
+    color: $white;
+    padding: 1rem;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.5s;
+     }
+}
+
+@mixin centered-block() {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,6 +52,10 @@ $desktop: 1440px;
 
 @mixin rounded-corners($size) {
     border-radius: $size
+}
+
+@mixin rounded-corner($position, $size) {
+    border-#{$position}-radius: $size;
 }
 
 @mixin shadow($color, $opacity) {
@@ -45,7 +70,7 @@ body{
 
 .pricing-component {
     @include centered-block;
-    @include rounded-corners(0.5rem);
+    @include rounded-corners($radius);
     @include shadow($grayishBlue, 0.6);
     width: 50rem;
     background-color: $white;
@@ -70,11 +95,16 @@ body{
         display: flex;
         color: $white;
         .pricing {
+            @include rounded-corner(bottom-left, $radius);
             padding: 2rem;
             width: 50%;
             background-color: $cyan;
+            a {
+                @include button;
+            }
         }
         .why-us {
+            @include rounded-corner(bottom-right, $radius);
             padding: 2rem;
             width: 50%;
             background-color: $lighterCyan;
