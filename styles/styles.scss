@@ -1,0 +1,28 @@
+// --- Colors ---
+//     Primary
+$cyan: hsl(179, 62%, 43%);
+$brightYellow: hsl(71, 73%, 54%);
+
+//     Neutral
+$lightGray: hsl(204, 43%, 93%);
+$grayishBlue: hsl(218, 22%, 67%);
+
+// --- fonts ---
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+// device
+$mobile: 375px;
+$desktop: 1440px;
+
+body{
+    background-color: $lightGray;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+}
+.attribution { 
+    font-size: 80%; 
+    text-align: center; 
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
