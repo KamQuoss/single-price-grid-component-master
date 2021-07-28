@@ -48,17 +48,17 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - SCSS custom properties generated to CSS 
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
+- live preview with Live Server
 - basics of BEM methodology
 - default headings sizes
 - compiling from SCSS files to CSS in VSCode with LiveSassCompiler
-- live preview with Live Server
-- Sass variables and mixins
+- Sass variables, mixins, special functions
 - css selector specificity
+- css pseudo classes
 
 
 To see how you can add code snippets, see below:
@@ -66,9 +66,9 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```scss
+@mixin rounded-corner($position, $size) {
+    border-#{$position}-radius: $size;
 }
 ```
 
@@ -76,13 +76,15 @@ To see how you can add code snippets, see below:
 
 I want to continue learning BEM methodology, and proper naming website elements.
 I found very useful Sass variables and mixins. Definitely I will use them in my future projects.
+Future reading: ARIA
 
 ### Useful resources
 
 - [Box Shadow Generator](https://cssgenerator.pl/box-shadow-generator/) - This helped me to build nice shadow. I could instantly see which variables are responsible for appearance.
 - [Adobe Color Wheel](https://color.adobe.com/pl/create/color-wheel) - This helped me to find additional colors.
+- [centering things with CSS](https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/) - How to center things on page.
 
 ## Author
 
-- LinkedIn - [Kamila Kłosek][Kamila Kłosek] (https://www.linkedin.com/in/kamila-k%C5%82osek-b16b08a7/)
+- LinkedIn - [Kamila Kłosek](https://www.linkedin.com/in/kamila-k%C5%82osek-b16b08a7/)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)

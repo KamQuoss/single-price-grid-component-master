@@ -18,6 +18,7 @@ $mobile: 375px;
 $desktop: 1440px;
 
 $radius: 0.5rem;
+$block-padding: 3rem;
 
 @mixin reset-list() {
     margin: 0;
@@ -28,9 +29,9 @@ $radius: 0.5rem;
 @mixin button() {
     @include rounded-corners($radius);
     @include shadow($black, 0.2);
-    display: inline-flex;
-    vertical-align: middle;
+    display: block;
     text-decoration: none;
+    text-align: center;
     font-size: large;
     background-color: $brightYellow;
     color: $white;
@@ -53,6 +54,8 @@ $radius: 0.5rem;
 @mixin rounded-corners($size) {
     border-radius: $size
 }
+
+// possible positions: top-left, top-right, bottom-right, bottom-left
 
 @mixin rounded-corner($position, $size) {
     border-#{$position}-radius: $size;
@@ -77,46 +80,65 @@ body{
     color: $grayishBlue;
     display: flex;
     flex-direction: column;
-    h1 {
-        color: $cyan;
-    }
-    h2 {
-        color: $brightYellow
-    }
-    p {
-        line-height: 1.6;
-        font-size: large;
-    }
+
 
     .title {
-        padding: 2rem;
+        padding: $block-padding;
+        h2 {
+            color: $brightYellow;
+        }
     }
     .info {
         display: flex;
         color: $white;
         .pricing {
             @include rounded-corner(bottom-left, $radius);
-            padding: 2rem;
+            padding: $block-padding;
             width: 50%;
             background-color: $cyan;
+            .pricing-highlight {
+                display: flex;
+                align-items: center;
+                .number{
+                    font-size: 2.6rem;
+                    padding-right: 1rem;
+                }
+                .text {
+                    opacity: 0.7;
+                }
+            }
             a {
                 @include button;
+                width: calc(100% - #{$block-padding})
             }
         }
         .why-us {
             @include rounded-corner(bottom-right, $radius);
-            padding: 2rem;
+            padding: $block-padding;
             width: 50%;
             background-color: $lighterCyan;
         }
-    }
-    
+    }    
 }
 
+h1 {
+    color: $cyan;
+    &:first-child {margin-top: 0;}
+}
+h2 {
+    color: $white;
+    &:first-child {margin-top: 0;}
+}
 ul {
     @include reset-list;
 }
-
+p, li {
+    line-height: 1.6;
+    font-size: large;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
 .attribution { 
     font-size: 80%; 
     text-align: center; 

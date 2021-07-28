@@ -26,21 +26,12 @@ body {
           flex-direction: column;
 }
 
-.pricing-component h1 {
-  color: #2ab2af;
-}
-
-.pricing-component h2 {
-  color: #c0df34;
-}
-
-.pricing-component p {
-  line-height: 1.6;
-  font-size: large;
-}
-
 .pricing-component .title {
-  padding: 2rem;
+  padding: 3rem;
+}
+
+.pricing-component .title h2 {
+  color: #c0df34;
 }
 
 .pricing-component .info {
@@ -52,26 +43,43 @@ body {
 
 .pricing-component .info .pricing {
   border-bottom-left-radius: 0.5rem;
-  padding: 2rem;
+  padding: 3rem;
   width: 50%;
   background-color: #2ab2af;
+}
+
+.pricing-component .info .pricing .pricing-highlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pricing-component .info .pricing .pricing-highlight .number {
+  font-size: 2.6rem;
+  padding-right: 1rem;
+}
+
+.pricing-component .info .pricing .pricing-highlight .text {
+  opacity: 0.7;
 }
 
 .pricing-component .info .pricing a {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: middle;
+  display: block;
   text-decoration: none;
+  text-align: center;
   font-size: large;
   background-color: #c0df34;
   color: #fff;
   padding: 1rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  width: calc(100% - 3rem);
 }
 
 .pricing-component .info .pricing a:hover {
@@ -83,15 +91,40 @@ body {
 
 .pricing-component .info .why-us {
   border-bottom-right-radius: 0.5rem;
-  padding: 2rem;
+  padding: 3rem;
   width: 50%;
   background-color: #2EBFBD;
+}
+
+h1 {
+  color: #2ab2af;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+h2 {
+  color: #fff;
+}
+
+h2:first-child {
+  margin-top: 0;
 }
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+p, li {
+  line-height: 1.6;
+  font-size: large;
+}
+
+p:last-child, li:last-child {
+  margin-bottom: 0;
 }
 
 .attribution {
