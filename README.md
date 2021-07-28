@@ -85,4 +85,4 @@ Next time I will start styling with mobile first approach, and writing media que
 ## Author
 
 - LinkedIn - [Kamila Kłosek](https://www.linkedin.com/in/kamila-k%C5%82osek-b16b08a7/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+<!-- - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername) -->
