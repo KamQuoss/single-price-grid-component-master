@@ -27,6 +27,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./images/desktop.png)
+![](./images/mobile.png)
 
 ### Links
 
@@ -48,6 +49,7 @@ Users should be able to:
 - Sass variables, mixins, special functions
 - css selector specificity
 - css pseudo classes
+- how to make README.md file
 
 ```scss
 @mixin rounded-corner($position, $size) {
@@ -69,8 +71,10 @@ a {
 ### Continued development
 
 I want to continue learning BEM methodology, and proper naming website elements.
-I found very useful Sass variables and mixins. Definitely I will use them in my future projects.
-Future reading: ARIA
+I found very useful Sass variables and mixins. Definitely I will use them in my future projects. Also I've noticed that sass compiler compiles cross browser code :thumbsup:
+Future reading: ARIA :wheelchair:
+
+Next time I will start styling with mobile first approach, and writing media queries first.
 
 ### Useful resources
 

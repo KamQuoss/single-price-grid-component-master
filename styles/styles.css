@@ -26,8 +26,20 @@ body {
           flex-direction: column;
 }
 
+@media screen and (max-width: 840px) {
+  .pricing-component {
+    width: 80vw;
+  }
+}
+
 .pricing-component .title {
   padding: 3rem;
+}
+
+@media screen and (max-width: 840px) {
+  .pricing-component .title {
+    padding: 1.6rem;
+  }
 }
 
 .pricing-component .title h2 {
@@ -41,11 +53,28 @@ body {
   color: #fff;
 }
 
+@media screen and (max-width: 840px) {
+  .pricing-component .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .pricing-component .info .pricing {
   border-bottom-left-radius: 0.5rem;
   padding: 3rem;
   width: 50%;
   background-color: #2ab2af;
+}
+
+@media screen and (max-width: 840px) {
+  .pricing-component .info .pricing {
+    border-bottom-left-radius: 0rem;
+    padding: 1.6rem;
+    width: unset;
+  }
 }
 
 .pricing-component .info .pricing .pricing-highlight {
@@ -94,6 +123,14 @@ body {
   padding: 3rem;
   width: 50%;
   background-color: #2EBFBD;
+}
+
+@media screen and (max-width: 840px) {
+  .pricing-component .info .why-us {
+    border-bottom-left-radius: 0.5rem;
+    padding: 1.6rem;
+    width: unset;
+  }
 }
 
 h1 {

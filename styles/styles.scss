@@ -80,22 +80,39 @@ body{
     color: $grayishBlue;
     display: flex;
     flex-direction: column;
-
+    
+    @media screen and (max-width: 840px){
+        $block-padding: 1.6rem;
+        width: 80vw;
+    }
 
     .title {
         padding: $block-padding;
+        @media screen and (max-width: 840px){
+            $block-padding: 1.6rem;
+            padding: $block-padding;
+        }
         h2 {
             color: $brightYellow;
         }
     }
     .info {
         display: flex;
+        @media screen and (max-width: 840px){
+            flex-direction: column;
+        }
         color: $white;
         .pricing {
             @include rounded-corner(bottom-left, $radius);
             padding: $block-padding;
             width: 50%;
             background-color: $cyan;
+            @media screen and (max-width: 840px){
+                @include rounded-corner(bottom-left, 0rem);
+                $block-padding: 1.6rem;
+                padding: $block-padding;
+                width: unset;
+            }
             .pricing-highlight {
                 display: flex;
                 align-items: center;
@@ -117,6 +134,12 @@ body{
             padding: $block-padding;
             width: 50%;
             background-color: $lighterCyan;
+            @media screen and (max-width: 840px){
+                @include rounded-corner(bottom-left, $radius);
+                $block-padding: 1.6rem;
+                padding: $block-padding;
+                width: unset;
+            }
         }
     }    
 }
@@ -146,3 +169,4 @@ p, li {
         color: hsl(228, 45%, 44%);
     }
 }
+
