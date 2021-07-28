@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://kamquoss.github.io/single-price-grid-component-master/index.html)
+- Live Site URL: [here](https://kamquoss.github.io/single-price-grid-component-master/index.html)
 
 ## My process
 
@@ -42,26 +42,30 @@ Users should be able to:
 
 ### What I learned
 
-- live preview with Live Server
-- basics of BEM methodology
-- default headings sizes
+- live preview with Live Server in VSCode
 - compiling from SCSS files to CSS in VSCode with LiveSassCompiler
+- basics of BEM methodology
 - Sass variables, mixins, special functions
 - css selector specificity
 - css pseudo classes
 
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```scss
 @mixin rounded-corner($position, $size) {
     border-#{$position}-radius: $size;
 }
 ```
-
+```scss
+h1 {
+    color: $cyan;
+    &:first-child {margin-top: 0;}
+}
+```
+```scss
+a {
+    @include button;
+    width: calc(100% - #{$block-padding})
+}
+```
 ### Continued development
 
 I want to continue learning BEM methodology, and proper naming website elements.
